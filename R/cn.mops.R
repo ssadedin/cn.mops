@@ -384,11 +384,11 @@ cn.mops <- function(input,I = c(0.025,0.5,1,1.5,2,2.5,3,3.5,4),
 		cov <- rep(1,N)
 	} else if (norm==1) {
 		message("Normalizing...")
-		X.norm <- normalizeChromosomes(X,chr=chr,normType=normType,qu=normQu,
+		X.norm <- normalizeGenome(X,chr=chr,normType=normType,qu=normQu,
 				sizeFactor=sizeFactor,quSizeFactor=quSizeFactor)
 		cov <- rep(1,N)
 	} else if (norm==2) {
-		X.viz <- normalizeChromosomes(X,chr=chr,normType=normType,qu=normQu,
+		X.viz <- normalizeGenome(X,chr=chr,normType=normType,qu=normQu,
 				sizeFactor=sizeFactor,quSizeFactor=quSizeFactor)
 		X.norm <- X
 		# robust estimates for the different coverages
