@@ -388,7 +388,7 @@ cn.mops <- function(input,I = c(0.025,0.5,1,1.5,2,2.5,3,3.5,4),
 				sizeFactor=sizeFactor,quSizeFactor=quSizeFactor)
 		cov <- rep(1,N)
 	} else if (norm==2) {
-		X.viz <- normalizeGenome(X,chr=chr,normType=normType,qu=normQu,
+		X.viz <- normalizeGenome(X,normType=normType,qu=normQu,
 				sizeFactor=sizeFactor,quSizeFactor=quSizeFactor)
 		X.norm <- X
 		# robust estimates for the different coverages
