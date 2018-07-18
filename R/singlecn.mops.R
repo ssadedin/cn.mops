@@ -170,7 +170,7 @@ singlecn.mops <- function(x,I = c(0.025,0.5,1,1.5,2,2.5,3,3.5,4),
 	} else if(class(x)=="GRanges"){
 	
 		inputType <- "GRanges"
-		x <- IRanges::sort(x)
+		x <- sortSeqlevels(x)
 		X <- IRanges::as.matrix(IRanges::values(x))
 		
 		if (ncol(as.matrix(values(x)))!=1){

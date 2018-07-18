@@ -187,7 +187,7 @@ haplocn.mops <- function(input,I = c(0.025,1,2,3,4,5,6,7,8),
 	############ check input ##################################################
 	if(class(input)=="GRanges"){
 		inputType <- "GRanges"
-		input <- IRanges::sort(input)
+		input <- sortSeqlevels(input)
 		X <- IRanges::as.matrix(IRanges::values(input))
 		
 		if (ncol(X)==1){

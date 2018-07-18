@@ -173,8 +173,8 @@ referencecn.mops <- function(cases,controls,
 	
 	if(class(cases)=="GRanges" & class(controls)=="GRanges"){
 		inputType <- "GRanges"
-		cases <- IRanges::sort(cases)
-		controls <- IRanges::sort(controls)
+		cases <- sortSeqlevels(cases)
+		controls <- sortSeqlevels(controls)
 		if (length(cases)!=length(controls)){
 			stop("Cases and controls must have the same length.")
 		}

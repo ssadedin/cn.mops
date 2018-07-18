@@ -236,7 +236,7 @@ cn.mops <- function(input,I = c(0.025,0.5,1,1.5,2,2.5,3,3.5,4),
 	############ check input ##################################################
 	if(class(input)=="GRanges"){
 		inputType <- "GRanges"
-		input <- IRanges::sort(input)
+		input <- sortSeqlevels(input)
 		X <- IRanges::as.matrix(IRanges::values(input))
 		if (ncol(X)==1){
 			stop("It is not possible to run cn.mops on only ONE sample.\n")
